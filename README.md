@@ -13,11 +13,11 @@ Users should be able to:
 
 ## Screenshot
 
-![](./screenshot.jpg)
+![](./design/screenshot.png)
 
 ## Live Site
 
-[TBD](https://example.com)
+[Expenses Chart - Live Link](https://brookescodestuff.github.io/expenses-chart/)
 
 ## Built with
 
