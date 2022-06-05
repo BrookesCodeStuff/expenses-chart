@@ -67,6 +67,33 @@ fetch("./assets/js/data.json")
           legend: {
             display: false,
           },
+          tooltip: {
+            backgroundColor: "hsl(25, 47%, 15%)",
+            displayColors: false,
+            padding: 8,
+            bodyFont: {
+              size: 18,
+            },
+            yAlign: "bottom",
+            position: "nearest",
+            callbacks: {
+              label: function (context) {
+                let label = "";
+
+                if (label) {
+                  label += ": ";
+                }
+                if (context.parsed.y !== null) {
+                  label += new Intl.NumberFormat("en-US", {
+                    style: "currency",
+                    currency: "USD",
+                  }).format(context.parsed.y);
+                }
+                return label;
+              },
+              title: function () {},
+            },
+          },
         },
       },
     };
@@ -79,7 +106,6 @@ fetch("./assets/js/data.json")
     const highestValue = Math.max(...expenses);
     let dataset = expenseChart.data.datasets[0];
     for (var i = 0; i < dataset.data.length; i++) {
-      console.log(dataset.data[i]);
       if (dataset.data[i] === highestValue) {
         dataset.backgroundColor[i] = "hsl(186, 34%, 60%)";
         dataset.hoverBackgroundColor[i] = "hsla(186, 34%, 60%, 50%)";
