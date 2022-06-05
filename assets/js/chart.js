@@ -18,6 +18,7 @@ fetch("./assets/js/data.json")
         {
           backgroundColor: "rgba(236, 117, 93, 1)",
           borderColor: "rgba(236, 117, 93, 1)",
+          hoverBackgroundColor: "hsl(186, 34%, 60%)",
           data: expenses,
         },
       ],
@@ -40,6 +41,9 @@ fetch("./assets/js/data.json")
             grid: {
               display: false,
               drawBorder: false,
+            },
+            ticks: {
+              color: "hsl(28, 10%, 53%)",
             },
           },
         },

@@ -70,3 +70,12 @@ picture {
     scroll-behavior: auto !important;
   }
 }
+
+.wrapper {
+  margin: 0 auto;
+  width: 90vw;
+}
+
+.inline {
+  display: inline;
+}
