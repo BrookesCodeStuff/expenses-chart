@@ -6,8 +6,10 @@
   --clr-med-brown: 28, 10%, 53%;
   --clr-cream: 27, 66%, 92%;
   --clr-pale-orange: 33, 100%, 98%;
-  --fs-400: 1.125rem;
-  --fs-300: 1rem;
+  --fs-24: 1.5rem;
+  --fs-18: 1.125rem;
+  --fs-16: 1rem;
+  --fs-15: 0.9375rem;
 }
 
 /* MODERN CSS RESET */
@@ -41,6 +43,9 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: hsl(var(--clr-pale-orange));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* A elements that don't have a class get default styles */
@@ -71,11 +76,55 @@ picture {
   }
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 90vw;
+  max-width: 540px;
+  max-height: 660px;
+  min-height: 534px;
 }
 
-.inline {
-  display: inline;
+.balance-container {
+  background-color: hsl(var(--clr-soft-red));
+  color: hsl(var(--clr-cream));
+  justify-content: space-between;
+  align-items: center;
+  height: 97px;
+  padding: 32px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 810px) {
+  .balance-container {
+    height: 125px;
+  }
+}
+
+.balance-container > p > span:first-of-type {
+  font-size: var(--fs-15);
+}
+
+.balance-container > p > span:nth-child(2) {
+  font-size: var(--fs-24);
+  font-weight: 700;
+}
+
+img {
+  width: 60px;
+  height: 40px;
+}
+
+@media screen and (min-width: 810px) {
+  img {
+    width: 72px;
+    height: 48px;
+  }
 }
