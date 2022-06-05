@@ -1,6 +1,6 @@
 # Expenses Chart Component
 
-A responsive, simple budget component. The component is responsive and built with a mobile-first process. The design for this component was provided by [Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt).
+A responsive, simple budget component. The component is built with a mobile-first process. The design for this component was provided by [Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt).
 
 ## User Story
 
