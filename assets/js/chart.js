@@ -16,9 +16,25 @@ fetch("./assets/js/data.json")
       labels: xLabels,
       datasets: [
         {
-          backgroundColor: "rgba(236, 117, 93, 1)",
+          backgroundColor: [
+            "rgba(236, 117, 93, 1)",
+            "rgba(236, 117, 93, 1)",
+            "rgba(236, 117, 93, 1)",
+            "rgba(236, 117, 93, 1)",
+            "rgba(236, 117, 93, 1)",
+            "rgba(236, 117, 93, 1)",
+            "rgba(236, 117, 93, 1)",
+          ],
           borderColor: "rgba(236, 117, 93, 1)",
-          hoverBackgroundColor: "hsl(186, 34%, 60%)",
+          hoverBackgroundColor: [
+            "rgba(236, 117, 93, .5)",
+            "rgba(236, 117, 93, .5)",
+            "rgba(236, 117, 93, .5)",
+            "rgba(236, 117, 93, .5)",
+            "rgba(236, 117, 93, .5)",
+            "rgba(236, 117, 93, .5)",
+            "rgba(236, 117, 93, .5)",
+          ],
           data: expenses,
         },
       ],
@@ -59,5 +75,17 @@ fetch("./assets/js/data.json")
       document.getElementById("expenseChart"),
       config
     );
+
+    const highestValue = Math.max(...expenses);
+    let dataset = expenseChart.data.datasets[0];
+    for (var i = 0; i < dataset.data.length; i++) {
+      console.log(dataset.data[i]);
+      if (dataset.data[i] === highestValue) {
+        dataset.backgroundColor[i] = "hsl(186, 34%, 60%)";
+        dataset.hoverBackgroundColor[i] = "hsla(186, 34%, 60%, 50%)";
+      }
+    }
+
+    expenseChart.update();
   })
   .catch((err) => console.log(err));
