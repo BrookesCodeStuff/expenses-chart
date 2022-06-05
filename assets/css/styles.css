@@ -6,6 +6,7 @@
   --clr-med-brown: 28, 10%, 53%;
   --clr-pale-orange: 27, 66%, 92%;
   --clr-cream: 33, 100%, 98%;
+  --fs-32: 2rem;
   --fs-30: 1.875rem;
   --fs-24: 1.5rem;
   --fs-18: 1.125rem;
@@ -45,6 +46,7 @@ body {
   line-height: 1.5;
   background-color: hsl(var(--clr-pale-orange));
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -124,6 +126,15 @@ img {
 }
 
 @media screen and (min-width: 810px) {
+  .balance-container > p > span:first-of-type {
+    font-size: var(--fs-18);
+  }
+
+  .balance-container > p > span:nth-child(2) {
+    font-size: var(--fs-32);
+    font-weight: 700;
+  }
+
   img {
     width: 72px;
     height: 48px;
@@ -135,6 +146,12 @@ img {
   background-color: hsl(var(--clr-cream));
   padding: 24px 20px;
   border-radius: 5px;
+}
+
+@media screen and (min-width: 810px) {
+  .spending-container {
+    padding: 24px 40px;
+  }
 }
 
 .spending-container h2 {
@@ -172,4 +189,16 @@ img {
 
 .total-container > div:last-of-type {
   text-align: right;
+}
+
+.attribution {
+  margin-top: 16px;
+  font-size: var(--fs-15);
+  color: hsl(var(--clr-med-brown));
+}
+
+.attribution a {
+  text-decoration: none;
+  font-weight: 700;
+  color: hsl(var(--clr-med-brown));
 }
