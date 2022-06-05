@@ -4,8 +4,9 @@
   --clr-cyan: 186, 34%, 60%;
   --clr-dark-brown: 25, 47%, 15%;
   --clr-med-brown: 28, 10%, 53%;
-  --clr-cream: 27, 66%, 92%;
-  --clr-pale-orange: 33, 100%, 98%;
+  --clr-pale-orange: 27, 66%, 92%;
+  --clr-cream: 33, 100%, 98%;
+  --fs-30: 1.875rem;
   --fs-24: 1.5rem;
   --fs-18: 1.125rem;
   --fs-16: 1rem;
@@ -94,7 +95,7 @@ picture {
 
 .balance-container {
   background-color: hsl(var(--clr-soft-red));
-  color: hsl(var(--clr-cream));
+  color: #fff;
   justify-content: space-between;
   align-items: center;
   height: 97px;
@@ -127,4 +128,48 @@ img {
     width: 72px;
     height: 48px;
   }
+}
+
+.spending-container {
+  margin-top: 16px;
+  background-color: hsl(var(--clr-cream));
+  padding: 24px 20px;
+  border-radius: 5px;
+}
+
+.spending-container h2 {
+  font-weight: 700;
+  color: hsl(var(--clr-dark-brown));
+  margin-bottom: 52px;
+}
+
+.spending-container hr {
+  color: hsl(var(--clr-pale-orange));
+  border: 1px hsl(var(--clr-pale-orange)) solid;
+}
+
+.total-container {
+  margin-top: 24px;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: var(--fs-15);
+}
+
+.total-container > div:first-of-type > p:first-of-type,
+.total-container > div:last-of-type > p:last-of-type {
+  color: hsl(var(--clr-med-brown));
+}
+
+.total-container > div:first-of-type > p:last-of-type,
+.total-container > div:last-of-type > p:first-of-type {
+  font-weight: 700;
+  color: hsl(var(--clr-dark-brown));
+}
+
+.total-container > div:first-of-type > p:last-of-type {
+  font-size: var(--fs-30);
+}
+
+.total-container > div:last-of-type {
+  text-align: right;
 }
