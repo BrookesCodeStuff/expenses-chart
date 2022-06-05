@@ -1,5 +1,13 @@
 :root {
   font-family: "DM Sans", sans-serif;
+  --clr-soft-red: 10, 79%, 65%;
+  --clr-cyan: 186, 34%, 60%;
+  --clr-dark-brown: 25, 47%, 15%;
+  --clr-med-brown: 28, 10%, 53%;
+  --clr-cream: 27, 66%, 92%;
+  --clr-pale-orange: 33, 100%, 98%;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
 }
 
 /* MODERN CSS RESET */
@@ -32,6 +40,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: hsl(var(--clr-pale-orange));
 }
 
 /* A elements that don't have a class get default styles */
