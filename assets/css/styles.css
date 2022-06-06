@@ -153,8 +153,8 @@ img {
 .spending-container h2 {
   font-weight: 700;
   color: hsl(var(--clr-dark-brown));
-  margin-bottom: 52px;
   font-size: var(--fs-24);
+  margin-bottom: 16px;
 }
 
 .spending-container hr {
@@ -172,6 +172,7 @@ img {
 
   .spending-container h2 {
     font-size: var(--fs-32);
+    margin-bottom: 24px;
   }
 
   .spending-container hr {
