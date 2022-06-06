@@ -44,7 +44,7 @@ fetch("./assets/js/data.json")
       type: "bar",
       data: data,
       options: {
-        borderRadius: 3,
+        borderRadius: 5,
         backgroundColor: "rgba(236, 117, 93, 1)",
         scales: {
           y: {
