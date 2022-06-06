@@ -160,7 +160,7 @@ img {
 .spending-container hr {
   color: hsl(var(--clr-pale-orange));
   border: 1px hsl(var(--clr-pale-orange)) solid;
-  margin-top: 24px;
+  margin: 24px 0;
 }
 
 @media screen and (min-width: 810px) {
@@ -180,7 +180,6 @@ img {
 }
 
 .total-container {
-  margin: 24px 0;
   justify-content: space-between;
   align-items: flex-end;
   font-size: var(--fs-15);
@@ -219,7 +218,6 @@ img {
 @media screen and (min-width: 810px) {
   .total-container {
     font-size: var(--fs-18);
-    margin: 32px 0;
   }
 
   .total-container > div:first-of-type > p:last-of-type {
